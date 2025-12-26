@@ -1,0 +1,49 @@
+-- The C compiler identification is AppleClang 17.0.0.17000404
+-- The CXX compiler identification is AppleClang 17.0.0.17000404
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/Users/akko/.local/share/mamba/envs/ros_jazzy_full/share/ament_cmake/cmake)
+-- Found Python3: /Users/akko/.local/share/mamba/envs/ros_jazzy_full/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.17.2 (/Users/akko/.local/share/mamba/envs/ros_jazzy_full/share/ament_lint_auto/cmake)
+-- Configuring done (1.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/full_pipeline.launch.py
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/nav2_launch.py
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/sim_launch.py
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/slam_launch.py
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/models/.DS_Store
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/models/diff_robot/model.config
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/models/diff_robot/model.sdf
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/worlds/factory.world
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/worlds/room.world
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/config/mapper_params_online_async.yaml
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/config/nav2_params.yaml
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/config/plugins2.cfg
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/lib/diff_robot_sim/odom_tf_broadcaster.py
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/ament_index/resource_index/package_run_dependencies/diff_robot_sim
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/ament_index/resource_index/parent_prefix_path/diff_robot_sim
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/ament_prefix_path.sh
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/ament_prefix_path.dsv
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/path.sh
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/path.dsv
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.bash
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.sh
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.zsh
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.dsv
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/package.dsv
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/ament_index/resource_index/packages/diff_robot_sim
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/cmake/diff_robot_simConfig.cmake
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/cmake/diff_robot_simConfig-version.cmake
+-- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/package.xml

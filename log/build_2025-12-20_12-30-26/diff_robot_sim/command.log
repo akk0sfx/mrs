@@ -1,0 +1,4 @@
+Invoking command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim': CONDA_PROMPT_MODIFIER=(base) SHLVL=5 XPC_SERVICE_NAME=0 _=/usr/bin/env /usr/local/bin/cmake --build /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim -- -j12 -l12
+Invoked command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim' returned '0': CONDA_PROMPT_MODIFIER=(base) SHLVL=5 XPC_SERVICE_NAME=0 _=/usr/bin/env /usr/local/bin/cmake --build /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim -- -j12 -l12
+Invoking command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim': CONDA_PROMPT_MODIFIER=(base) SHLVL=5 XPC_SERVICE_NAME=0 _=/usr/bin/env /usr/local/bin/cmake --install /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim
+Invoked command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim' returned '0': CONDA_PROMPT_MODIFIER=(base) SHLVL=5 XPC_SERVICE_NAME=0 _=/usr/bin/env /usr/local/bin/cmake --install /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim

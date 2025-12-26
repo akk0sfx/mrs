@@ -1,0 +1,55 @@
+[0.013s] Invoking command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim': CMAKE_PREFIX_PATH=/Users/akko/.local/share/mamba/envs/ros_jazzy_full CONDA_PROMPT_MODIFIER=(ros_jazzy_full) SHLVL=2 _=/usr/bin/env __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0 /Users/akko/.local/share/mamba/envs/ros_jazzy_full/bin/cmake /Users/akko/Documents/GitHub/mrs/src/diff_robot_sim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/Users/akko/Documents/GitHub/mrs/install/diff_robot_sim
+[0.262s] -- The C compiler identification is AppleClang 17.0.0.17000404
+[0.337s] -- The CXX compiler identification is AppleClang 17.0.0.17000404
+[0.365s] -- Detecting C compiler ABI info
+[0.501s] -- Detecting C compiler ABI info - done
+[0.511s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.512s] -- Detecting C compile features
+[0.512s] -- Detecting C compile features - done
+[0.520s] -- Detecting CXX compiler ABI info
+[0.648s] -- Detecting CXX compiler ABI info - done
+[0.658s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.658s] -- Detecting CXX compile features
+[0.659s] -- Detecting CXX compile features - done
+[0.679s] -- Found ament_cmake: 2.5.4 (/Users/akko/.local/share/mamba/envs/ros_jazzy_full/share/ament_cmake/cmake)
+[0.778s] -- Found Python3: /Users/akko/.local/share/mamba/envs/ros_jazzy_full/bin/python3 (found version "3.12.12") found components: Interpreter
+[0.826s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.982s] -- Found ament_lint_auto: 0.17.2 (/Users/akko/.local/share/mamba/envs/ros_jazzy_full/share/ament_lint_auto/cmake)
+[1.034s] -- Configuring done (1.0s)
+[1.045s] -- Generating done (0.0s)
+[1.048s] -- Build files have been written to: /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim
+[1.050s] Invoked command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim' returned '0': CMAKE_PREFIX_PATH=/Users/akko/.local/share/mamba/envs/ros_jazzy_full CONDA_PROMPT_MODIFIER=(ros_jazzy_full) SHLVL=2 _=/usr/bin/env __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0 /Users/akko/.local/share/mamba/envs/ros_jazzy_full/bin/cmake /Users/akko/Documents/GitHub/mrs/src/diff_robot_sim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/Users/akko/Documents/GitHub/mrs/install/diff_robot_sim
+[1.052s] Invoking command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim': CMAKE_PREFIX_PATH=/Users/akko/.local/share/mamba/envs/ros_jazzy_full CONDA_PROMPT_MODIFIER=(ros_jazzy_full) SHLVL=2 _=/usr/bin/env __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0 /Users/akko/.local/share/mamba/envs/ros_jazzy_full/bin/cmake --build /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim -- -j12 -l12
+[1.100s] Invoked command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim' returned '0': CMAKE_PREFIX_PATH=/Users/akko/.local/share/mamba/envs/ros_jazzy_full CONDA_PROMPT_MODIFIER=(ros_jazzy_full) SHLVL=2 _=/usr/bin/env __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0 /Users/akko/.local/share/mamba/envs/ros_jazzy_full/bin/cmake --build /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim -- -j12 -l12
+[1.146s] Invoking command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim': CMAKE_PREFIX_PATH=/Users/akko/.local/share/mamba/envs/ros_jazzy_full CONDA_PROMPT_MODIFIER=(ros_jazzy_full) SHLVL=2 _=/usr/bin/env __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0 /Users/akko/.local/share/mamba/envs/ros_jazzy_full/bin/cmake --install /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim
+[1.157s] -- Install configuration: ""
+[1.157s] -- Execute custom install script
+[1.157s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/full_pipeline.launch.py
+[1.166s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/nav2_launch.py
+[1.176s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/sim_launch.py
+[1.185s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/slam_launch.py
+[1.194s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/models/.DS_Store
+[1.203s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/models/diff_robot/model.config
+[1.212s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/models/diff_robot/model.sdf
+[1.221s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/worlds/factory.world
+[1.230s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/worlds/room.world
+[1.240s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/config/mapper_params_online_async.yaml
+[1.249s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/config/nav2_params.yaml
+[1.258s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/config/plugins2.cfg
+[1.268s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/lib/diff_robot_sim/odom_tf_broadcaster.py
+[1.277s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/ament_index/resource_index/package_run_dependencies/diff_robot_sim
+[1.286s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/ament_index/resource_index/parent_prefix_path/diff_robot_sim
+[1.296s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/ament_prefix_path.sh
+[1.306s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/ament_prefix_path.dsv
+[1.315s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/path.sh
+[1.325s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/path.dsv
+[1.333s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.bash
+[1.343s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.sh
+[1.352s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.zsh
+[1.361s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.dsv
+[1.371s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/package.dsv
+[1.380s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/ament_index/resource_index/packages/diff_robot_sim
+[1.390s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/cmake/diff_robot_simConfig.cmake
+[1.399s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/cmake/diff_robot_simConfig-version.cmake
+[1.409s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/package.xml
+[1.419s] Invoked command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim' returned '0': CMAKE_PREFIX_PATH=/Users/akko/.local/share/mamba/envs/ros_jazzy_full CONDA_PROMPT_MODIFIER=(ros_jazzy_full) SHLVL=2 _=/usr/bin/env __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0 /Users/akko/.local/share/mamba/envs/ros_jazzy_full/bin/cmake --install /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim

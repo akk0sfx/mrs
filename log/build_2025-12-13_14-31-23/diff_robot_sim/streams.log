@@ -1,0 +1,36 @@
+[0.012s] Invoking command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim': CONDA_PROMPT_MODIFIER=(base) SHLVL=3 XPC_SERVICE_NAME=0 _=/usr/bin/env /usr/local/bin/cmake --build /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim -- -j12 -l12
+[0.082s] Invoked command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim' returned '0': CONDA_PROMPT_MODIFIER=(base) SHLVL=3 XPC_SERVICE_NAME=0 _=/usr/bin/env /usr/local/bin/cmake --build /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim -- -j12 -l12
+[0.090s] Invoking command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim': CONDA_PROMPT_MODIFIER=(base) SHLVL=3 XPC_SERVICE_NAME=0 _=/usr/bin/env /usr/local/bin/cmake --install /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim
+[0.113s] [1/1] cmake_install.cmake
+[0.113s] -- Install configuration: ""
+[0.113s] -- Execute custom install script
+[0.113s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/full_pipeline.launch.py
+[0.113s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/nav2_launch.py
+[0.113s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/sim_launch.py
+[0.113s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/launch/slam_launch.py
+[0.113s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/models/.DS_Store
+[0.113s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/models/diff_robot/model.config
+[0.113s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/models/diff_robot/model.sdf
+[0.113s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/worlds/factory.world
+[0.113s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/worlds/main.world
+[0.113s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/worlds/room.world
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/worlds/room_min.world
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/config/mapper_params_online_async.yaml
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/config/nav2_params.yaml
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/lib/diff_robot_sim/odom_tf_broadcaster.py
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/ament_index/resource_index/package_run_dependencies/diff_robot_sim
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/ament_index/resource_index/parent_prefix_path/diff_robot_sim
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/ament_prefix_path.sh
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/ament_prefix_path.dsv
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/path.sh
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/path.dsv
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.bash
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.sh
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.zsh
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/local_setup.dsv
+[0.114s] -- Symlinking: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/package.dsv
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/ament_index/resource_index/packages/diff_robot_sim
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/cmake/diff_robot_simConfig.cmake
+[0.114s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/cmake/diff_robot_simConfig-version.cmake
+[0.115s] -- Up-to-date symlink: /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/package.xml
+[0.115s] Invoked command in '/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim' returned '0': CONDA_PROMPT_MODIFIER=(base) SHLVL=3 XPC_SERVICE_NAME=0 _=/usr/bin/env /usr/local/bin/cmake --install /Users/akko/Documents/GitHub/mrs/build/diff_robot_sim

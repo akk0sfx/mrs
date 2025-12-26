@@ -1,0 +1,1 @@
+/Users/akko/Documents/GitHub/mrs/src/diff_robot_sim/launch/full_pipeline.launch.py

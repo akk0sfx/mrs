@@ -1,0 +1,1 @@
+/Users/akko/.local/share/mamba/envs/ros_jazzy_full/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh

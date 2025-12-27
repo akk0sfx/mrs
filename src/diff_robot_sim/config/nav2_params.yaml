@@ -338,7 +338,7 @@ collision_monitor:
     stop_pub_timeout: 0.5
     enable_stamped_cmd_vel: false
     base_shift_correction: true
-    observation_sources: ['scan']
+    observation_sources: scan
     scan:
       type: scan
       topic: /scan

@@ -28,15 +28,24 @@ class FrontierExplorer(Node):
 
     def __init__(self):
         super().__init__('frontier_explorer')
-        self._declare_if_missing('use_sim_time', False)
-        self._map_topic = self._declare_if_missing('map_topic', '/map')
-        self._map_frame = self._declare_if_missing('map_frame', 'map')
-        self._base_frame = self._declare_if_missing('base_frame', 'base_footprint')
-        self._min_frontier_size = int(self._declare_if_missing('min_frontier_size', 10))
-        self._min_goal_distance = float(self._declare_if_missing('min_goal_distance', 0.6))
-        self._goal_timeout = float(self._declare_if_missing('goal_timeout', 60.0))
-        self._replan_period = float(self._declare_if_missing('replan_period', 2.0))
-        self._search_radius = int(self._declare_if_missing('free_cell_search_radius', 12))
+        self.declare_parameter('use_sim_time', False)
+        self.declare_parameter('map_topic', '/map')
+        self.declare_parameter('map_frame', 'map')
+        self.declare_parameter('base_frame', 'base_footprint')
+        self.declare_parameter('min_frontier_size', 10)
+        self.declare_parameter('min_goal_distance', 0.6)
+        self.declare_parameter('goal_timeout', 60.0)
+        self.declare_parameter('replan_period', 2.0)
+        self.declare_parameter('free_cell_search_radius', 12)
+
+        self._map_topic = self.get_parameter('map_topic').value
+        self._map_frame = self.get_parameter('map_frame').value
+        self._base_frame = self.get_parameter('base_frame').value
+        self._min_frontier_size = int(self.get_parameter('min_frontier_size').value)
+        self._min_goal_distance = float(self.get_parameter('min_goal_distance').value)
+        self._goal_timeout = float(self.get_parameter('goal_timeout').value)
+        self._replan_period = float(self.get_parameter('replan_period').value)
+        self._search_radius = int(self.get_parameter('free_cell_search_radius').value)
 
         qos = QoSProfile(
             depth=1,
@@ -56,11 +65,6 @@ class FrontierExplorer(Node):
 
         self.create_timer(self._replan_period, self._tick)
         self.get_logger().info('Frontier explorer waiting for /map and Nav2.')
-
-    def _declare_if_missing(self, name, default):
-        if not self.has_parameter(name):
-            self.declare_parameter(name, default)
-        return self.get_parameter(name).value
 
     def _on_map(self, msg):
         self._map = msg

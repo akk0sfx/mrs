@@ -16,8 +16,8 @@ class WASDTeleop(Node):
     def __init__(self):
         super().__init__('wasd_teleop')
         self.declare_parameter('linear_speed', 0.25)
-        self.declare_parameter('angular_speed', 0.9)
-        self.declare_parameter('deadman_timeout', 0.25)
+        self.declare_parameter('angular_speed', 0.8)
+        self.declare_parameter('deadman_timeout', 0.8)
         self._linear = float(self.get_parameter('linear_speed').value)
         self._angular = float(self.get_parameter('angular_speed').value)
         self._timeout = float(self.get_parameter('deadman_timeout').value)
@@ -26,7 +26,7 @@ class WASDTeleop(Node):
         self._last_key_time = 0.0
         self._timer = self.create_timer(0.05, self._on_timer)
 
-        self.get_logger().info('WASD teleop: W/S forward/back, A/D rotate, Space stop, X exit.')
+        self.get_logger().info('WASD teleop: W/S back/forward, A/D rotate, Space stop, X exit.')
 
     def _get_key(self):
         if select.select([sys.stdin], [], [], 0)[0]:
@@ -39,9 +39,9 @@ class WASDTeleop(Node):
             key = key.lower()
             twist = Twist()
             if key == 'w':
-                twist.linear.x = self._linear
-            elif key == 's':
                 twist.linear.x = -self._linear
+            elif key == 's':
+                twist.linear.x = self._linear
             elif key == 'a':
                 twist.angular.z = self._angular
             elif key == 'd':
@@ -60,9 +60,12 @@ class WASDTeleop(Node):
             self._pub.publish(twist)
             return
 
-        if self._last_key_time and (time.monotonic() - self._last_key_time) > self._timeout:
-            if self._last_twist.linear.x != 0.0 or self._last_twist.angular.z != 0.0:
-                self._last_twist = Twist()
+        if self._last_key_time:
+            if (time.monotonic() - self._last_key_time) > self._timeout:
+                if self._last_twist.linear.x != 0.0 or self._last_twist.angular.z != 0.0:
+                    self._last_twist = Twist()
+                    self._pub.publish(self._last_twist)
+            else:
                 self._pub.publish(self._last_twist)
 
 

@@ -16,6 +16,7 @@
 /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/lib/diff_robot_sim/odom_tf_broadcaster.py
 /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/lib/diff_robot_sim/diagnostics_check.py
 /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/lib/diff_robot_sim/wasd_teleop.py
+/Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/lib/diff_robot_sim/frontier_explorer.py
 /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/ament_index/resource_index/package_run_dependencies/diff_robot_sim
 /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/ament_index/resource_index/parent_prefix_path/diff_robot_sim
 /Users/akko/Documents/GitHub/mrs/install/diff_robot_sim/share/diff_robot_sim/environment/ament_prefix_path.sh

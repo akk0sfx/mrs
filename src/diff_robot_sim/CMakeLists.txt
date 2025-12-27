@@ -52,6 +52,7 @@ install(
     scripts/odom_tf_broadcaster.py
     scripts/diagnostics_check.py
     scripts/wasd_teleop.py
+    scripts/frontier_explorer.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

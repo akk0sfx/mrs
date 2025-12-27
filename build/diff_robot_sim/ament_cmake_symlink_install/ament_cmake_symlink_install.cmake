@@ -322,8 +322,8 @@ ament_cmake_symlink_install_directory("/Users/akko/Documents/GitHub/mrs/src/diff
 # install(DIRECTORY "config" "DESTINATION" "share/diff_robot_sim")
 ament_cmake_symlink_install_directory("/Users/akko/Documents/GitHub/mrs/src/diff_robot_sim" DIRECTORY "config" "DESTINATION" "share/diff_robot_sim")
 
-# install(PROGRAMS "scripts/odom_tf_broadcaster.py" "scripts/diagnostics_check.py" "scripts/wasd_teleop.py" "DESTINATION" "lib/diff_robot_sim")
-ament_cmake_symlink_install_programs("/Users/akko/Documents/GitHub/mrs/src/diff_robot_sim" PROGRAMS "scripts/odom_tf_broadcaster.py" "scripts/diagnostics_check.py" "scripts/wasd_teleop.py" "DESTINATION" "lib/diff_robot_sim")
+# install(PROGRAMS "scripts/odom_tf_broadcaster.py" "scripts/diagnostics_check.py" "scripts/wasd_teleop.py" "scripts/frontier_explorer.py" "DESTINATION" "lib/diff_robot_sim")
+ament_cmake_symlink_install_programs("/Users/akko/Documents/GitHub/mrs/src/diff_robot_sim" PROGRAMS "scripts/odom_tf_broadcaster.py" "scripts/diagnostics_check.py" "scripts/wasd_teleop.py" "scripts/frontier_explorer.py" "DESTINATION" "lib/diff_robot_sim")
 
 # install(FILES "/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/diff_robot_sim" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/Users/akko/Documents/GitHub/mrs/src/diff_robot_sim" FILES "/Users/akko/Documents/GitHub/mrs/build/diff_robot_sim/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/diff_robot_sim" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

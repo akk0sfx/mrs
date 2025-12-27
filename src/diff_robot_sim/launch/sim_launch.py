@@ -20,14 +20,16 @@ def generate_launch_description():
 
     bridge_args = [
         '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
-        '/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry',
+        '/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry',
         '/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
     ]
+    bridge_remaps = [('/odometry', '/odom')]
 
     bridge_no_clock = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
         arguments=bridge_args,
+        remappings=bridge_remaps,
         output='screen',
         condition=UnlessCondition(use_sim_time),
     )
@@ -36,6 +38,7 @@ def generate_launch_description():
         package='ros_gz_bridge',
         executable='parameter_bridge',
         arguments=bridge_args + ['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock'],
+        remappings=bridge_remaps,
         output='screen',
         condition=IfCondition(use_sim_time),
     )
@@ -93,7 +96,11 @@ def generate_launch_description():
     odom_tf = Node(
         package='diff_robot_sim',
         executable='odom_tf_broadcaster.py',
-        parameters=tf_params,
+        parameters=tf_params + [{
+            'odom_topic': '/odom',
+            'odom_frame': 'odom',
+            'base_frame': 'base_footprint',
+        }],
         output='screen',
     )
 
@@ -118,7 +125,7 @@ def generate_launch_description():
             output='screen',
         )
         gz_gui = TimerAction(
-            period=2.0,
+            period='2.0',
             actions=[
                 ExecuteProcess(
                     cmd=[gz_bin, 'sim', '-g', '-v', '3'],

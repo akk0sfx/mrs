@@ -51,6 +51,16 @@
         <geometry>
           <cylinder><radius>0.07</radius><length>0.05</length></cylinder>
         </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.8</mu>
+              <mu2>1.8</mu2>
+              <slip1>0.02</slip1>
+              <slip2>0.02</slip2>
+            </ode>
+          </friction>
+        </surface>
       </collision>
     </link>
     <joint name="wheel_fl_joint" type="revolute">
@@ -81,6 +91,16 @@
         <geometry>
           <cylinder><radius>0.07</radius><length>0.05</length></cylinder>
         </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.8</mu>
+              <mu2>1.8</mu2>
+              <slip1>0.02</slip1>
+              <slip2>0.02</slip2>
+            </ode>
+          </friction>
+        </surface>
       </collision>
     </link>
     <joint name="wheel_fr_joint" type="revolute">
@@ -111,6 +131,16 @@
         <geometry>
           <cylinder><radius>0.07</radius><length>0.05</length></cylinder>
         </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.8</mu>
+              <mu2>1.8</mu2>
+              <slip1>0.02</slip1>
+              <slip2>0.02</slip2>
+            </ode>
+          </friction>
+        </surface>
       </collision>
     </link>
     <joint name="wheel_rl_joint" type="revolute">
@@ -141,6 +171,16 @@
         <geometry>
           <cylinder><radius>0.07</radius><length>0.05</length></cylinder>
         </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.8</mu>
+              <mu2>1.8</mu2>
+              <slip1>0.02</slip1>
+              <slip2>0.02</slip2>
+            </ode>
+          </friction>
+        </surface>
       </collision>
     </link>
     <joint name="wheel_rr_joint" type="revolute">
@@ -314,11 +354,21 @@
       <right_joint>wheel_rr_joint</right_joint>
       <wheel_separation>0.30</wheel_separation>
       <wheel_radius>0.07</wheel_radius>
+      <odom_publish_frequency>50</odom_publish_frequency>
       <topic>/cmd_vel</topic>
-      <odom_topic>/odom</odom_topic>
+      <odom_topic>/wheel_odom</odom_topic>
       <frame_id>odom</frame_id>
       <child_frame_id>base_footprint</child_frame_id>
-      <publish_odom>true</publish_odom>
+      <publish_odom>false</publish_odom>
+    </plugin>
+
+    <plugin name="gz::sim::systems::OdometryPublisher"
+            filename="gz-sim-odometry-publisher-system">
+      <odom_frame>odom</odom_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+      <dimensions>2</dimensions>
+      <odom_topic>/odometry</odom_topic>
+      <odom_publish_frequency>50</odom_publish_frequency>
     </plugin>
 
   </model>

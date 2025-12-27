@@ -36,6 +36,18 @@ ros2 launch diff_robot_sim full_pipeline.launch.py \
    - RViz uses `Fixed Frame: map` and shows `/scan` and `/map`.
    - The map updates once the robot moves.
 
+## Autonomous exploration (Nav2 + frontiers)
+
+1. Launch with autonomy enabled:
+
+   ```bash
+   ros2 launch diff_robot_sim full_pipeline.launch.py use_gui:=true use_rviz:=true enable_autonomy:=true
+   ```
+
+2. The `frontier_explorer` node will send goals to Nav2 to cover unknown map areas.
+   - Teleop is disabled automatically while autonomy is enabled.
+   - Stop autonomy with Ctrl+C and relaunch without `enable_autonomy`.
+
 ## Quick checks
 
 ```bash

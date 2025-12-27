@@ -22,9 +22,11 @@ def generate_launch_description():
     use_rviz = LaunchConfiguration('use_rviz')
     use_nav2 = LaunchConfiguration('use_nav2')
     enable_teleop = LaunchConfiguration('enable_teleop')
+    enable_autonomy = LaunchConfiguration('enable_autonomy')
     use_sim_time = LaunchConfiguration('use_sim_time')
     nav2_delay = LaunchConfiguration('nav2_delay')
     rviz_delay = LaunchConfiguration('rviz_delay')
+    autonomy_delay = LaunchConfiguration('autonomy_delay')
     nav2_params = LaunchConfiguration('nav2_params_file')
     slam_params = LaunchConfiguration('slam_params_file')
     map_yaml = LaunchConfiguration('map')
@@ -60,6 +62,16 @@ def generate_launch_description():
         }.items()
     )
 
+    slam_only_condition = IfCondition(PythonExpression([
+        "'", use_nav2, "'.lower() == 'false' and '",
+        enable_autonomy, "'.lower() == 'false'"
+    ]))
+
+    nav2_or_autonomy = PythonExpression([
+        "'", use_nav2, "'.lower() == 'true' or '",
+        enable_autonomy, "'.lower() == 'true'"
+    ])
+
     slam_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             PathJoinSubstitution([pkg_share, 'launch', 'slam_launch.py'])
@@ -68,7 +80,7 @@ def generate_launch_description():
             'slam_params_file': slam_params,
             'use_sim_time': use_sim_time,
         }.items(),
-        condition=UnlessCondition(use_nav2)
+        condition=slam_only_condition
     )
 
     rviz_node = Node(
@@ -89,6 +101,7 @@ def generate_launch_description():
         ],
         condition=IfCondition(PythonExpression([
             "'", use_nav2, "'.lower() == 'false' and '",
+            enable_autonomy, "'.lower() == 'false' and '",
             use_rviz, "'.lower() == 'true'"
         ])),
     )
@@ -102,7 +115,26 @@ def generate_launch_description():
         ],
         output='screen',
         emulate_tty=True,
-        condition=IfCondition(enable_teleop),
+        condition=IfCondition(PythonExpression([
+            "'", enable_teleop, "'.lower() == 'true' and '",
+            enable_autonomy, "'.lower() == 'false'"
+        ])),
+    )
+
+    frontier_explorer = TimerAction(
+        period=autonomy_delay,
+        actions=[
+            Node(
+                package='diff_robot_sim',
+                executable='frontier_explorer.py',
+                output='screen',
+                parameters=[
+                    {'use_sim_time': ParameterValue(use_sim_time, value_type=bool)},
+                    {'map_topic': '/map'},
+                ],
+            )
+        ],
+        condition=IfCondition(enable_autonomy),
     )
 
     return LaunchDescription([
@@ -144,6 +176,11 @@ def generate_launch_description():
             description='Launch teleop_twist_keyboard for SLAM-only demo'
         ),
         DeclareLaunchArgument(
+            'enable_autonomy',
+            default_value='false',
+            description='Enable frontier-based autonomous exploration (requires Nav2)'
+        ),
+        DeclareLaunchArgument(
             'nav2_delay',
             default_value='2.0',
             description='Delay (sec) before starting Nav2'
@@ -152,6 +189,11 @@ def generate_launch_description():
             'rviz_delay',
             default_value='2.5',
             description='Delay (sec) before starting RViz'
+        ),
+        DeclareLaunchArgument(
+            'autonomy_delay',
+            default_value='6.0',
+            description='Delay (sec) before starting frontier explorer'
         ),
         DeclareLaunchArgument(
             'map',
@@ -180,6 +222,7 @@ def generate_launch_description():
         TimerAction(
             period=nav2_delay,
             actions=[nav2_launch],
-            condition=IfCondition(use_nav2),
+            condition=IfCondition(nav2_or_autonomy),
         ),
+        frontier_explorer,
     ])

@@ -88,7 +88,6 @@ def generate_launch_description():
         executable='rviz2',
         arguments=['-d', rviz_config],
         parameters=[{'use_sim_time': ParameterValue(use_sim_time, value_type=bool)}],
-        additional_env={'QT_MAC_WANTS_LAYER': '1'},
         output='screen',
         emulate_tty=True,
     )
@@ -96,6 +95,8 @@ def generate_launch_description():
     rviz = TimerAction(
         period=rviz_delay,
         actions=[
+            # macOS: force Qt to create a real window for RViz.
+            SetEnvironmentVariable('QT_MAC_WANTS_LAYER', '1'),
             rviz_node,
         ],
         condition=IfCondition(PythonExpression([
@@ -137,7 +138,6 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        SetEnvironmentVariable('QT_MAC_WANTS_LAYER', '1'),
         LogInfo(msg='SLAM-only demo: expect /scan, /odom, /map and TF odom->base_link, map->odom.'),
         LogInfo(msg='Teleop disabled by default. Enable with enable_teleop:=true (WASD in this terminal).'),
         DeclareLaunchArgument(
